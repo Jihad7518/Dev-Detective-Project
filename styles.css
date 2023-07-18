@@ -83,3 +83,17 @@ body {
   background-size: 20px;
 }
 
+#input {
+  border: none;
+  width: 80%;
+  outline: none;
+  background: none;
+  color: var(--lm-text);
+  padding-left: 50px;
+}
+
+#input::placeholder {
+  color: var(--lm-text);
+  letter-spacing: -0.5px;
+  font-size: 13px;
+}
