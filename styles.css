@@ -217,3 +217,25 @@ body {
   align-items: center;
 }
 
+.bottom-icons {
+  width: 20px;
+  filter: var(--lm-icon-bg);
+}
+
+.profile-info p {
+  overflow-wrap: break-word;
+}
+
+.profile-info a {
+  color: var(--lm-text);
+  word-break: break-all;
+}
+
+.error {
+  position: absolute;
+  color: red;
+  font-weight: bold;
+  right: 10px;
+  top: -25px;
+}
+
