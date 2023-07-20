@@ -290,5 +290,19 @@ body {
   .profile-header {
     margin-bottom: 0;
   }
+  #avatar {
+    width: 117px;
+  }
 
+  .profile-content {
+    gap: 30px;
+  }
+
+  .profile-info-wrapper {
+    justify-content: center;
+  }
+
+  .profile-name h2 {
+    font-size: 26px;
+  }
 
