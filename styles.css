@@ -119,3 +119,21 @@ body {
   cursor: pointer;
   background-color: var(--btn-hover);
 }
+
+.btn-search:active {
+  transform: scale(0.975);
+}
+
+.profile-container {
+  background-color: var(--lm-bg-content);
+  border-radius: 15px;
+  box-shadow: var(--lm-shadow);
+  padding: 24px;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-evenly;
+}
