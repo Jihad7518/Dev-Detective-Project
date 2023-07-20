@@ -254,3 +254,23 @@ body {
 .active {
   box-shadow: var(--lm-shadow);
 }
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 573px;
+  }
+
+  .searchbar-container {
+    padding: 10px;
+  }
+
+  #input {
+    font-size: 18px;
+    width: 75%;
+  }
+
+  #input::placeholder {
+    font-size: 18px;
+  }
+
