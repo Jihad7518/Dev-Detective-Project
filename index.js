@@ -21,3 +21,14 @@ const repos = get("repos");
 const followers = get("followers");
 const following = get("following");
 const user_location = get("location");
+const page = get("page");
+const twitter = get("twitter");
+const company = get("company");
+let darkMode = false;
+
+// Event Listeners
+btnsubmit.addEventListener("click", function () {
+  if (input.value !== "") {
+    getUserData(url + input.value);
+  }
+});
