@@ -87,3 +87,14 @@ function updateProfile(data) {
         return true;
       }
     }
+
+     avatar.src = `${data.avatar_url}`;
+    userName.innerText = data.name === null ? data.login : data.name;
+    user.innerText = `@${data.login}`;
+    user.href = `${data.html_url}`;
+    datesegments = data.created_at.split("T").shift().split("-");
+    date.innerText = `Joined ${datesegments[2]} ${months[datesegments[1] - 1]} ${datesegments[0]}`;
+    bio.innerText = data.bio == null ? "This profile has no bio" : `${data.bio}`;
+    repos.innerText = `${data.public_repos}`;
+    followers.innerText = `${data.followers}`;
+    following.innerText = `${data.following}`;
