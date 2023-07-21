@@ -50,3 +50,26 @@ input.addEventListener("input", function () {
   noresults.style.display = "none";
 });
 
+
+btnmode.addEventListener("click", function () {
+  if (darkMode == false) {
+    darkModeProperties();
+  } else {
+    lightModeProperties();
+  }
+});
+
+// Functions
+
+//API CALL
+function getUserData(gitUrl) {
+  fetch(gitUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      updateProfile(data);
+    })
+    .catch((error) => {
+      
+    });
+}
