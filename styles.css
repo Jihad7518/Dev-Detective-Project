@@ -346,3 +346,25 @@ body {
     font-size: 15px;
   }
 }
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 730px;
+  }
+
+  .profile-container {
+    position: relative;
+  }
+
+  .profile-content {
+    width: 480px;
+    margin-left: auto;
+    gap: 16px;
+  }
+
+  #avatar {
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+  }
