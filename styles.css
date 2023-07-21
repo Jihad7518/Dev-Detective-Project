@@ -321,3 +321,18 @@ body {
     font-size: 15px;
     top: -30px;
   }
+  .profile-stats-wrapper {
+    padding: 18px 32px;
+  }
+
+  .profile-stat {
+    text-align: start;
+  }
+
+  .stat-title {
+    font-size: 13px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+  }
