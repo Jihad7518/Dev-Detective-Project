@@ -368,3 +368,16 @@ body {
     left: 0;
     margin-left: 40px;
   }
+   .profile-info-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .profile-name {
+    gap: 2px;
+  }
+
+  #date {
+    padding-top: 10px;
+  }
