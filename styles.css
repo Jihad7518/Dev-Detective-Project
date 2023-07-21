@@ -290,6 +290,7 @@ body {
   .profile-header {
     margin-bottom: 0;
   }
+
   #avatar {
     width: 117px;
   }
@@ -305,6 +306,7 @@ body {
   .profile-name h2 {
     font-size: 26px;
   }
+
   #user {
     font-size: 16px;
   }
@@ -321,6 +323,7 @@ body {
     font-size: 15px;
     top: -30px;
   }
+
   .profile-stats-wrapper {
     padding: 18px 32px;
   }
@@ -336,6 +339,7 @@ body {
   .stat-value {
     font-size: 22px;
   }
+
   .profile-bottom-wrapper {
     flex-wrap: wrap;
     flex-direction: row;
@@ -368,7 +372,8 @@ body {
     left: 0;
     margin-left: 40px;
   }
-   .profile-info-wrapper {
+
+  .profile-info-wrapper {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
@@ -381,7 +386,8 @@ body {
   #date {
     padding-top: 10px;
   }
-   .profile-stats-wrapper {
+
+  .profile-stats-wrapper {
     margin: 20px 0;
   }
 
