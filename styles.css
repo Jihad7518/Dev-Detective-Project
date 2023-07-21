@@ -381,3 +381,18 @@ body {
   #date {
     padding-top: 10px;
   }
+   .profile-stats-wrapper {
+    margin: 20px 0;
+  }
+
+  .error {
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    font-size: 15px;
+  }
+
+  #input {
+    width: 65%;
+  }
+}
