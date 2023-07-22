@@ -184,4 +184,14 @@ function init() {
     console.log("truer k andar");
     darkModeProperties();
   }
+else if(value == "false") {
+    console.log("false k andar");
+    lightModeProperties();
+  }
 
+
+  //by default, pranaygupta ki info show krre h UI pr
+  getUserData(url + "jihad7518");
+}
+
+init();
