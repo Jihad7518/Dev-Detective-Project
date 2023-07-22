@@ -172,3 +172,16 @@ function init() {
   //darkMode = true -> dark mode enable karna h 
   //darMode = false -> light mode enable karna h 
   darkMode = false;
+
+ const value = localStorage.getItem("dark-mode");
+
+  if(value === null) {
+    console.log("null k andar");
+    localStorage.setItem("dark-mode", darkMode);
+    lightModeProperties();
+  }
+  else if(value == "true") {
+    console.log("truer k andar");
+    darkModeProperties();
+  }
+
