@@ -33,7 +33,6 @@ btnsubmit.addEventListener("click", function () {
   }
 });
 
-
 input.addEventListener(
   "keydown",
   function (e) {
@@ -49,7 +48,6 @@ input.addEventListener(
 input.addEventListener("input", function () {
   noresults.style.display = "none";
 });
-
 
 btnmode.addEventListener("click", function () {
   if (darkMode == false) {
@@ -70,11 +68,12 @@ function getUserData(gitUrl) {
       updateProfile(data);
     })
     .catch((error) => {
-      
+      throw error;
     });
 }
 
-/RENDER
+
+//RENDER
 function updateProfile(data) {
   if (data.message !== "Not Found") {
     noresults.style.display = "none";
@@ -87,8 +86,7 @@ function updateProfile(data) {
         return true;
       }
     }
-
-     avatar.src = `${data.avatar_url}`;
+    avatar.src = `${data.avatar_url}`;
     userName.innerText = data.name === null ? data.login : data.name;
     user.innerText = `@${data.login}`;
     user.href = `${data.html_url}`;
@@ -98,7 +96,7 @@ function updateProfile(data) {
     repos.innerText = `${data.public_repos}`;
     followers.innerText = `${data.followers}`;
     following.innerText = `${data.following}`;
-     user_location.innerText = checkNull(data.location, user_location) ? data.location : "Not Available";
+    user_location.innerText = checkNull(data.location, user_location) ? data.location : "Not Available";
     page.innerText = checkNull(data.blog, page) ? data.blog : "Not Available";
     page.href = checkNull(data.blog, page) ? data.blog : "#";
     twitter.innerText = checkNull(data.twitter_username, twitter) ? data.twitter_username : "Not Available";
@@ -110,6 +108,8 @@ function updateProfile(data) {
     noresults.style.display = "block";
   }
 }
+
+
 
 //dark mode default
 const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -157,6 +157,7 @@ function lightModeProperties() {
   root.setProperty("--lm-icon-bg", "brightness(100%)");
   darkMode = false;
   console.log("darkmode changed to " + darkMode);
+
   localStorage.setItem("dark-mode", false);
   console.log("setting dark mode to false");
 }
@@ -173,7 +174,9 @@ function init() {
   //darMode = false -> light mode enable karna h 
   darkMode = false;
 
- const value = localStorage.getItem("dark-mode");
+// const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const value = localStorage.getItem("dark-mode");
 
   if(value === null) {
     console.log("null k andar");
@@ -184,7 +187,7 @@ function init() {
     console.log("truer k andar");
     darkModeProperties();
   }
-else if(value == "false") {
+  else if(value == "false") {
     console.log("false k andar");
     lightModeProperties();
   }
